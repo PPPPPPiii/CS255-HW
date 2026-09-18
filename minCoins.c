@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-double minCoins(double input){
+int minCoins(double input){
     double cents = input / 100;
     int quarters = cents / 0.25;
     
@@ -9,7 +9,7 @@ double minCoins(double input){
 
     double pennies = (cents - quarters*0.25 - dime*0.1)/0.01;
 
-    double total = quarters + dime + pennies;
+    int total = quarters + dime + pennies;
 
     return total;
 }
